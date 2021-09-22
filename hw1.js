@@ -16,8 +16,8 @@ let user = {
     isMan: false,
     variableUndefined: undefined,
     variableNull: null
-
     };
+    
     console.log("***Task 4***");
     console.log(user.name + " " + user.age);
     console.log(typeof user.isMan);
