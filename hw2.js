@@ -136,6 +136,8 @@ console.log(answer);
 
     console.log("--------------");
 
+    //let currentHour = 2;
+
     // Спосіб привітатися №1 
     console.log("Конструкція If-else каже: ");
 
@@ -145,9 +147,11 @@ console.log(answer);
         console.log("Доброго дня!");
     } else if ( 17 < currentHour && currentHour < 23 ) {
         console.log("Доброго вечора!");
-    } else if ( 23 <= currentHour && currentHour <= 5 ) {
+    } else if ( 23 <= currentHour ) {
         console.log("Доброї ночі!");
-    } else if ( currentHour = 0 ) {
+    } else if ( currentHour <= 5 ) {
+        console.log("Доброї ночі!");
+    } else if ( currentHour == 0 ) {
         console.log("Доброї ночі!");
     } else {
         console.log("Щасливі на час не дивляться!");
@@ -155,21 +159,27 @@ console.log(answer);
 
     // Спосіб привітатися №2
     console.log("Конструкція switch каже: ");
+
+    
         
     switch (true) {
-        case 5 < Hour && Hour < 11:
+        case 5 < currentHour && currentHour < 11:
             console.log("Хай цей ранок буде чудовим!");
             break;
-        case 11 < Hour && Hour <= 17:
+        case 11 < currentHour && currentHour <= 17:
             console.log("Хай цей день принесе позитив!");
             break;
-        case 17 < Hour && Hour < 23:
+        case 17 < currentHour && currentHour < 23:
             console.log("Не сидіть ввечері довго онлайн!");
             break;
-        case 23 <= Hour && Hour <= 5:
+        case 23 <= currentHour:
              console.log("Гарних снів!");
             break;
-        case Hour = 0:
+        case currentHour <= 5:
+            console.log("Гарних снів!");
+            break;
+        
+        case currentHour == 0:
             console.log("Гарних снів!");
             break;
         default:
