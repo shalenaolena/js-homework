@@ -50,7 +50,69 @@ try {
 //--- Task 3 -------------------------------
 console.log("---Task 3---");
 
-//???ы
+// Я не зрозуміла умови залачі. Чому для втілення функції потрібен класс?
+// і як це зробити, щоб відображення було як в умовах задачі console.log(showMonthName(5)) якщо ми використовуємо класси...
+
+// class MonthException {
+//     constructor(month, message) { 
+//         this.month = month;
+//         this.message = message;
+//     }
+// }
+
+   function showMonthName(month) {
+       let message;
+        if (month >=1 && month <=12) {
+            switch (month) {
+                case 1: message = "January";
+                    break;
+                case 2: message = "February";
+                    break;
+                case 3: message = "March";
+                    break;
+                case 4: message = "April";
+                    break;
+                case 5: message = "May";
+                    break;
+                case 6: message = "June";
+                    break;
+                case 7: message = "July";
+                    break;
+                case 8: message = "August";
+                    break;
+                case 9: message = "September";
+                    break;
+                case 10: message = "October";
+                    break;
+                case 11: message = "November";
+                    break;
+                case 12: message = "December";
+                    break;
+                default: message = "Error";
+            }
+            return message;
+            
+        } else {
+            throw new Error("Incorrect month number");
+        }
+
+    }
+       
+    try {
+        console.log(showMonthName(1));
+        
+    }   catch (error) { 
+            console.log(error.message);
+    }
+
+
+    
+
+
+
+
+  
+  
 
 //--- Task 4 -------------------------------
 console.log("---Task 4---");
