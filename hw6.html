@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Task 1 -->
+
+    <div id="test">First</div>
+
+    <!-- Task 2 -->
+    <img class="image" src="dog.jpg">
+
+    <!-- Task 3 -->
+
+    <h2>Article header</h2>      
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+	<p>Another text</p>
+
+    <!-- Task 4 -->
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!-- Task 5 -->
+
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+
+    <!-- Task 6 -->
+
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+
+    <script>
+
+// --- Task 1 ------------------------
+
+document.getElementById("test").innerHTML = "Last 1";                
+
+document.querySelector("div#test").innerHTML = "Last 2";       
+
+document.querySelectorAll("div#test")[0].innerHTML = "Last 3";    
+
+
+// --- Task 2 ------------------------
+
+alert(document.querySelector(".image").src = "cat.jpg");
+
+// --- Task 3 ------------------------
+console.log("Task 3");
+
+const arrTask3 = document.querySelectorAll("div#text>p");
+
+for (let i = 0; i < arrTask3.length; i++) {
+    console.log(`Selector text ${i}: ${arrTask3[i].innerHTML}`);
+}
+
+// --- Task 4 ------------------------
+
+// 4.1
+const allLi = document.querySelectorAll("ul>li"); 
+alert (`Task 4.1: ${allLi[0].innerHTML}, ${allLi[4].innerHTML}, ${allLi[1].innerHTML}, ${allLi[3].innerHTML}, ${allLi[2].innerHTML}`);
+
+// 4.2
+const ulTag = document.querySelector("ul");
+alert("Task 4.2: " + ulTag.firstChild.nextSibling.innerHTML + ", " + ulTag.lastChild.previousSibling.innerHTML + ", " + ulTag.childNodes[3].innerHTML+ ", " + ulTag.childNodes[7].innerHTML + ", " + ulTag.childNodes[5].innerHTML );
+
+//4.3
+const ulTagIn = document.querySelector("ul").children;
+alert(`Task 4.3: ${ulTagIn[0].innerHTML}, ${ulTagIn[4].innerHTML}, ${ulTagIn[1].innerHTML}, ${ulTagIn[3].innerHTML}, ${ulTagIn[2].innerHTML}`);
+
+
+
+// --- Task 5 ------------------------
+document.querySelector("h1").style.background = "rgba(144,238,144,0.8)";   //виділяємо h1
+document.querySelector("h1").style.width = "300px";                        //але не на всю сторінку
+
+const tagsP = document.querySelectorAll("#myDiv > p");
+tagsP[0].style.fontWeight = "bold";                                        //параграфи
+tagsP[1].style.color = "red";                                           
+tagsP[2].style.textDecoration = "underline";
+tagsP[3].style.fontStyle = "italic";
+
+const tagsLiMyList = document.getElementById("myList").children;           //вирівнювання списку
+const makeMeHorizontal = tagsLiMyList[0].innerHTML + tagsLiMyList[1].innerHTML + tagsLiMyList[2].innerHTML;
+//document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal;
+
+document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal + "</li>";
+
+
+document.querySelector("span").style.opacity = "0";                        //прозорість
+
+// --- Task 6 ------------------------
+
+let inputValue1 = prompt("Text1?", "Text 1!");
+let inputValue2 = prompt("Text2?", "Text 2!");
+
+document.getElementById("input1").value = inputValue1;
+document.getElementById("input2").value = inputValue2;
+
+function changeInput (){
+    document.getElementById("input1").value = inputValue2;
+    document.getElementById("input2").value = inputValue1;
+}
+setTimeout(changeInput, 1000);  //затримка на секунду, бо не видно
+
+// --- Task 7 ------------------------
+
+let newMain = document.createElement("main");
+document.body.prepend(newMain);
+
+newMain.classList.add("mainClass");
+newMain.classList.add("check");
+newMain.classList.add("item");
+
+let newDiv = document.createElement("div");
+newDiv.id = "myDivTask7";
+document.querySelector("main").prepend(newDiv);
+
+let newP = document.createElement("p");
+newP.innerHTML = "First paragraph. Task 7";
+document.getElementById("myDivTask7").prepend(newP);
+
+
+    </script>
+</body>
+</html>

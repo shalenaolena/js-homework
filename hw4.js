@@ -53,12 +53,7 @@ console.log("---Task 3---");
 // Я не зрозуміла умови залачі. Чому для втілення функції потрібен класс?
 // і як це зробити, щоб відображення було як в умовах задачі console.log(showMonthName(5)) якщо ми використовуємо класси...
 
-// class MonthException {
-//     constructor(month, message) { 
-//         this.month = month;
-//         this.message = message;
-//     }
-// }
+
 
    function showMonthName(month) {
        let message;
@@ -106,7 +101,12 @@ console.log("---Task 3---");
     }
 
 
-    
+    // class MonthException {
+//     constructor(month, message) { 
+//         this.month = month;
+//         this.message = message;
+//     }
+// }
 
 
 
