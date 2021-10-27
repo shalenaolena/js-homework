@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #task3, #task4, #task5, #task6, #task7 {
+        padding: 10px 10px;
+    }
+    li {
+        list-style: none;
+    }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Task 2 -------------------------------------done-------->
+    <h3>Task 2</h3>
+
+    <p id ='text'>I learning JavaScript events!</p> 
+<div>
+
+	<button id = "buttonChange">Change style!</button>
+</div>
+
+     <!-- Task 3 -------------------------------------done-------->
+     <h3>Task 3</h3>
+    <div id="task3">
+    <button>BLUE</button> <button>PINK(двойной)</button> <button>BROWN(удерживание)</button> <a href="#">Yellow(наведение)</a>
+    </div>
+
+    <!-- Task 4 --------------------------------------------->
+    <h3>Task 4</h3>
+    <div id="task4">
+            <select id="listTask4">
+            <option value="opt1">Пункт 1</option>
+            <option value="opt2">Пункт 2</option>
+            <option value="opt3">Пункт 3</option>
+            <option value="opt4">Пункт 4</option>
+            <option value="opt5">Пункт 5</option>
+        </select> <button id="deleteOptionBtn">DELETE</button>
+    </div>
+      
+  
+    <!-- Task 5 ---------------------------------------done------>
+    <h3>Task 5</h3>
+    <div id="task5">
+        <button id="btnTask5">LIVE BUTTON Task 5</button>
+        <ul class="task5_text">
+
+        </ul>
+    </div>
+    
+
+    <!-- Task 6 --------------------------------------------->
+    <h3>Task 6</h3>
+    <div id="task6">
+        <ul id="task6_text">
+
+        </ul>
+    </div>
+
+    <!-- Task 7 --------------------------------------------->
+    <h3>Task 7</h3>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+                        
+    <select name="cities" id="cities"></select>
+
+ <script>
+// --- Task 1 ----------------------------------done-------
+    //open
+    
+    // let newWindow = window.open("/", "newWindow", "width=150,height=150,left=150,top=100");
+
+    // function changeSize () {
+    //     newWindow.resizeTo(500, 500);
+    // }
+
+    // function moveTo (){
+    //     newWindow.moveBy(200, 200);
+    // }
+
+    // function windowClose () {
+    //     newWindow.close();
+    // }
+
+    // setTimeout(changeSize, 2000);
+    // setTimeout(moveTo, 4000);
+    // setTimeout(windowClose, 6000);
+
+    // --- Task 2 -----------------------------------------
+    function textChange() {
+        const pText = document.getElementById("text");
+        pText.style.fontFamily = "Comic Sans MS";
+        pText.style.color = "orange";
+        pText.style.fontSize = "20px";
+    }
+
+    document.getElementById("buttonChange").addEventListener("click", textChange);
+
+// --- Task 3 -----------------------------------------
+    
+function bgBlue(){
+        document.body.style.background = "rgb(58, 171, 176)";
+    }
+
+    function bgPink(){
+        document.body.style.background = "#ee2547";
+    }
+    function bgBroun(){
+        document.body.style.background = "#ae7f47";
+    }
+    function bgLink(){
+        document.body.style.background = "#eaf147";
+    }
+    function bgLink(){
+        document.body.style.background = "#eaf147";
+    }
+    function bgWhite() {
+        document.body.style.background = "white";
+    }
+
+    const elementsTask3 = document.getElementById("task3").children;
+    elementsTask3[0].addEventListener("click", bgBlue);
+
+    elementsTask3[1].addEventListener("dblclick", bgPink);
+
+    elementsTask3[2].addEventListener("mousedown", bgBroun);
+    elementsTask3[2].addEventListener("mouseup", bgWhite);
+
+    elementsTask3[3].addEventListener("mouseover", bgLink);
+    elementsTask3[3].addEventListener("mouseout", bgWhite);
+
+// --- Task 5 -----------------------------------------
+const btnTask5 = document.getElementById("btnTask5");
+    const textPlace = document.querySelector(".task5_text");
+    
+    function pressedBtn() {
+        textPlace.insertAdjacentHTML('afterend', '<li>I was pressed!</li>');
+    }
+    function mouseOnBtn() {
+        textPlace.insertAdjacentHTML('afterend', '<li>Mouse on me!</li>');
+    }
+    function mouseOutBtn() {
+        textPlace.insertAdjacentHTML('afterend', '<li>Mouse is not on me!</li>');
+    }
+
+    btnTask5.onclick = pressedBtn;
+    btnTask5.onmouseover = mouseOnBtn;
+    btnTask5.onmouseout = mouseOutBtn;
+    
+ </script>
+
+    
+</body>
+</html>

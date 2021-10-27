@@ -107,11 +107,20 @@ tagsP[1].style.color = "red";
 tagsP[2].style.textDecoration = "underline";
 tagsP[3].style.fontStyle = "italic";
 
-const tagsLiMyList = document.getElementById("myList").children;           //вирівнювання списку
-const makeMeHorizontal = tagsLiMyList[0].innerHTML + tagsLiMyList[1].innerHTML + tagsLiMyList[2].innerHTML;
-//document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal;
+const tagUlMyList = document.getElementById("myList");                      //вирівнювання списку
+const tagsLiMyList = document.getElementById("myList").children;
 
-document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal + "</li>";
+tagUlMyList.style.listStyle = "none";      
+tagUlMyList.style.wordSpacing = "-10px";     
+
+for (let i = 0; i < tagsLiMyList.length; i++) {
+    tagsLiMyList[i].style.display = "inline-block";
+    
+}
+
+//const makeMeHorizontal = tagsLiMyList[0].innerHTML + tagsLiMyList[1].innerHTML + tagsLiMyList[2].innerHTML;
+//document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal;
+//document.getElementById("myList").innerHTML = "<li>" + makeMeHorizontal + "</li>";
 
 
 document.querySelector("span").style.opacity = "0";                        //прозорість
