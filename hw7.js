@@ -75,7 +75,7 @@
 
    btn4.addEventListener("click", removeElem);
     
-    
+   }
 
 
     // --- Task 5 -----------------------------------------
