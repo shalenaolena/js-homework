@@ -1,4 +1,5 @@
 //--- TASK 1 ------------------------------------------------------
+console.log("-----TASK 1----------------------");
 
 function upperCase (text) {
  let result = /^[A-Z]/.test(text);
@@ -17,25 +18,28 @@ upperCase('regexp');
 upperCase('RegExp');
 
 //--- TASK 2 ------------------------------------------------------
+console.log("-----TASK 2----------------------");
+
 function checkEmail(email) {
 
-    let result =/^[\w!#$&%'*+-/=?^_`{|}~.]+@[\w-_]+\.\w+$/.test(email);
+    let result =/^\w([\w!#$&%'*+-/=?^`{|}~.]+\w{1})?@[\w-]+\.[a-z]+$/.test(email);  //по правилам ніби так о_0
         if (result) {
             console.log('Email is correct!');
         } else {
             console.log('Error');
         }
+    return result;
 }
-checkEmail("Qmail2@gmail.com");
-//--- TASK 3 ------------------------------------------------------
+console.log(checkEmail("Qmail2@gmail.com"));
+//--- TASK 3 ----------------------------------NOT--------------------
 //Напишіть регулярний вираз, який знаходитиме в тексті одну літеру d, 
 //за якою йде одна чи більше b, за якими одна d. 
 //Запам’ятати знайдені b і наступну за ними d.  Враховувати верхній і нижній регістр.
 	// Приклад роботи:   
     // Для стрінги "cdbBdbsbz"
-    
+console.log("-----TASK 3----------------------");
 const str = "cdbBdbsbz";
-let re = /db+d?/ig;
+let re = /d(b+)*d*|bB/g;
 let result = str.match(re);
 	console.log(result);
     
@@ -43,7 +47,63 @@ let result = str.match(re);
     
     //результат ["dbBd", "bB", "d"]
     
-//--- TASK 4 ------------------------------------------------------
-//--- TASK 5 ------------------------------------------------------
-//--- TASK 6 ------------------------------------------------------
-//--- TASK 7 ------------------------------------------------------
+//--- TASK 4 -----------------------------------------done-------------
+console.log("TASK 4");
+
+//4.1
+
+console.log("Java Script".replace(/(\w+)\s(\w+)/, '$2, $1'));
+
+//4.2   
+console.log( "Java Script" .replace (/Script/, "Java") .replace ( /Java/, "Script" ));      //Java Java => Script Java
+    
+
+//--- TASK 5 -------------------------------------------done-----------
+console.log("-----TASK 5--------");
+// 9999-9999-9999-9999
+
+function cardCheck (cardN) {
+   // return /9999[ -]?9999[ -]?9999[ -]?9999/.test(cardN);     //
+   return /\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}/.test(cardN);    //просто 16 цифр с пробелами, тире или без них
+}
+console.log(cardCheck ("9999-9999-9999-9999"));
+
+
+
+//--- TASK 6 -----------------------------------------done-------------
+console.log("-----TASK 6--------");
+function checkEmail(email) {
+
+    let result =/^[A-Za-z0-9]+((-|_)?\w+)?@[\w-]+\.[a-z]+$/.test(email); 
+        if (result) {
+            console.log('Email is correct! ;)');
+        } else {
+            console.log('Error!!! Email is not correct!');
+        }
+    return result;
+}
+checkEmail('my_mail@gmail.com');
+checkEmail('#my_mail@gmail.com');
+checkEmail('my_ma--il@gmail.com');
+checkEmail('-mymail@gmail.com');
+checkEmail('_mymail@gmail.com');
+checkEmail('911@gmail.com');
+checkEmail('9@gmail.com');
+
+//\w включає “_” але за умовами задачі символи “_” і “-” не можуть бути ПЕРШИМИ. Про останні нічого сказано не було.
+//але якщо треба: /^[A-Za-z0-9]+((-|_)?[A-Za-z0-9]+)?@[\w-]+\.[a-z]+$/
+
+//--- TASK 7 ------------------------------------------done------------
+console.log("-----TASK 7--------");
+
+function checkLogin (login) {
+    let result = /^[^\\*][A-Za-z]+[^\\*](\d+)?(\.\d+)?[^\\*](\w+)?[^\\*][^_\\*]$/.test(login);
+   
+        console.log(`Login is ${result}`);
+        console.log(login.match(/\d+(\.\d+)?/g));
+        console.log("-------------------");
+    
+}
+
+checkLogin('ee1.1ret3');
+checkLogin('ee1*1ret3');
