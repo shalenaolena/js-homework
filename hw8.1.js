@@ -71,7 +71,7 @@ console.log(cardCheck ("9999-9999-9999-9999"));
 console.log("-----TASK 6--------");
 function checkEmail(email) {
 
-    let result =/^[A-Za-z0-9]+((-|_)?\w+)?@[\w-]+\.[a-z]+$/.test(email); 
+    let result =/^[A-Za-z0-9]+([\w-]+)?@[\w-]+\.[a-z]+$/.test(email); 
         if (result) {
             console.log('Email is correct! ;)');
         } else {
