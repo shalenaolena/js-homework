@@ -32,14 +32,11 @@ function checkEmail(email) {
 }
 console.log(checkEmail("Qmail2@gmail.com"));
 //--- TASK 3 ----------------------------------NOT--------------------
-//Напишіть регулярний вираз, який знаходитиме в тексті одну літеру d, 
-//за якою йде одна чи більше b, за якими одна d. 
-//Запам’ятати знайдені b і наступну за ними d.  Враховувати верхній і нижній регістр.
-	// Приклад роботи:   
-    // Для стрінги "cdbBdbsbz"
 console.log("-----TASK 3----------------------");
+//Не виходить :(((((((((((( Я багато перепробувала. Буду дивитись у розборі. Не можу здогадатися
+
 const str = "cdbBdbsbz";
-let re = /d(b+)*d*|bB/g;
+let re = /[db]{4}|b+/ig;
 let result = str.match(re);
 	console.log(result);
     
@@ -63,8 +60,8 @@ console.log("-----TASK 5--------");
 // 9999-9999-9999-9999
 
 function cardCheck (cardN) {
-   // return /9999[ -]?9999[ -]?9999[ -]?9999/.test(cardN);     //
-   return /\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}/.test(cardN);    //просто 16 цифр с пробелами, тире или без них
+   // return /9999[ -]?9999[ -]?9999[ -]?9999/.test(cardN);     //конкретний номер...
+   return /\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}/.test(cardN);    //просто цифри (16) з тире, пробылом чи без них
 }
 console.log(cardCheck ("9999-9999-9999-9999"));
 
@@ -97,7 +94,7 @@ checkEmail('9@gmail.com');
 console.log("-----TASK 7--------");
 
 function checkLogin (login) {
-    let result = /^[^\\*][A-Za-z]+[^\\*](\d+)?(\.\d+)?[^\\*](\w+)?[^\\*][^_\\*]$/.test(login);
+    let result = /^[^\\*][A-Za-z]+[^\\*](\d+)?(\.\d+)?[^\\*](\w+)?[^\\*][^_\\*]$/.test(login); //має бути елегантніший спосіб... але так працює
    
         console.log(`Login is ${result}`);
         console.log(login.match(/\d+(\.\d+)?/g));
