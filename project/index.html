@@ -6,27 +6,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="main-shop">
-        <header>
-
+    <div class="main_shop" id = "main_shop_div">
+<!-----------HEADER------------->
+        <header id = "header_box">
+            <div id="logo">
+                <span id="logo_text">Shop</span>
+            </div>
+            <div id="buttons">
+                <div class = "header_input_search" id="div_input_search">
+                        <form>
+                          <input type="text" placeholder="">
+                          <button type="submit"><img id="search_img" src="icons/search2.png" alt=""></button>
+                        </form>
+                    
+                </div>
+                <div class = "header_button" id="user"><a href="#"><img src="icons/user.png" alt="" ></a></div>
+                <div class = "header_button" id="white-cart"><a href="#"><img src="icons/white-cart.png" alt="" ></a></div>
+            </div>
         </header>
-        <div class="container">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+<!-----------CATEGORY and FILTER------------->
+        <div class="main_info">
+            <div class="category main_info_inner_blok">
+                <h2 id="category_name_h2">Усі товари</h2> 
+            </div>
+            <div class="main_manage_btns main_info_inner_blok">
+                <div class="manage_btn" id = "btn_add_item">
+                    <img src="icons/add.png" alt="">
+                </div>
+                <div class="manage_btn" id = "btn_filter">
+                    <img src="icons/filter.png" alt="">
+                </div>
+            </div> 
         </div>
+<!-----------ITEMS------------->
+        
+        <div class="container_items">
+            <div class="item">
+                <img src="img/cat1.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
 
-    </div>
+            <div class="item">
+                <img src="img/cat2.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/cat3.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/cat4.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/cat5.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/dog1.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/dog2.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+            <div class="item">
+                <img src="img/dog3.jpg" alt="">
+                <div class="item_data_blok">
+                    <div class="item_name">
+                        <h3>Назва тваринки</h3>
+                    </div>
+                    <div class="item_btns">
+                        <div class="item_btn_more_info">
+                            <a href="">Деталі</a>
+                        </div>
+                        <div class="item_btn_add_to_cart">
+                            <a href="">
+                                <img src="icons/white-cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--item -->
+
+         </div> <!--container -->
+
+    </div> main-shop<!--main_shop -->
     
     <script src="shop.js"></script>
 </body>
