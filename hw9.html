@@ -58,7 +58,7 @@
       //-- Task 4 -------------------------------------------------
       $("[type=checkbox]").change(function(){
 
-        if($("input:checked").length === 3) {    
+        if($("input:checked").length >= 3) {    
                     $("input").attr("disabled", true);
                     $("input:checked").attr("disabled", false);
             } else {
