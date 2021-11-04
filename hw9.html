@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <!-- Task 1 --------------------------------------done----------->
+    <a href="https://github.com">Link</a>
+  <!-- Task 2 ------------------------------------------------->
+  <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4<span>inner elem2</span></h2>
+    <h2>header5</h2>
+
+  <!-- Task 3 ------------------------------------------------->
+  <h3>header1</h3>
+   <div>text1</div>
+   <h3>header2</h3>
+   <div>text2</div>
+
+  <!-- Task 4 ------------------------------------------------->
+  <p id="checkboxes">
+    <input type="checkbox">checkbox 1
+    <input type="checkbox">checkbox 2
+    <input type="checkbox">checkbox 3
+    <input type="checkbox">checkbox 4
+    <input type="checkbox">checkbox 5
+    <input type="checkbox">checkbox 6
+  </p>
+
+  <!-- ------ ------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+      //-- Task 1 -------------------------------------done------------
+      $("a[href^='http']").attr('target','_blank');
+
+      //-- Task 2 ----------------------------------------done---------
+      $("h2.head").each(function( index ) {
+        this.style.background = "green";
+      });
+
+      $("h2.head>span.inner").each(function( index ) {
+        this.style.fontSize = "35px";                   //class inner have just 1 element
+      });
+      
+      //-- Task 3 --------------------------------------done-----------
+     const divs3 = $("h3").next("div");
+     $("h3").each(function( index ) {
+      $("h3")[index].before(divs3[index])
+      });
+      
+      //-- Task 4 -------------------------------------------------
+      $("[type=checkbox]").click(function(){
+
+        if($("input:checked").length === 3) {    
+                    $("input").attr("disabled", true);
+                    $("input:checked").attr("disabled", false);
+            }
+	
+});
+
+</script>
+
+    </script>
+    
+</body>
+</html>
+
