@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/catalog.css">
+    <link rel="stylesheet" href="style/modal.css">
+
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
@@ -47,163 +50,91 @@
         </div>
 <!-----------ITEMS------------->
         
-        <div class="container_items">
-            <div class="item">
+        <div class="container_items" id="container_items_catalog">
+
+            <!-- <div class="item" id="">
+                <div class="btn_item_edit">
+                    <img src="icons/edit.png" alt="">
+                </div>
                 <img src="img/cat1.jpg" alt="">
                 <div class="item_data_blok">
                     <div class="item_name">
                         <h3>Назва тваринки</h3>
+                        <h4 class = "item_price">Ціна: 100 грн</h4>
                     </div>
                     <div class="item_btns">
                         <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
+                            Деталі
                         </div>
                         <div class="item_btn_add_to_cart">
-                            <a href="">
+                           
                                 <img src="icons/white-cart.png" alt="">
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
-            </div> <!--item -->
+            </div>  -->
 
-            <div class="item">
-                <img src="img/cat2.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
+            
 
-            <div class="item">
-                <img src="img/cat3.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
+        </div> <!--container_items -->
 
-            <div class="item">
-                <img src="img/cat4.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
+<!-- Modal -->
+    <div class="modal_overlay modal_win" id="modal_overlay_id">
 
-            <div class="item">
-                <img src="img/cat5.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
+        <!-- Item Add Edit -->
+        <div class="modal_form_item modal_win" id="modal_item_add_edit">
+            <div class="modal_close" id="modal_close_item_add_edit">&times;</div>
+            <form action="#" class="feed_form">
+                <select name="category" id="modal_item_select_category">
+                    <option value="Cats">Котики</option>
+                    <option value="Dogs">Собачки</option>
+                    <option value="Birds">Пташечки</option>
+                    <option value="Other">Інші</option>
+                  </select>
+                <input type="text" name="name" id="modal_form_item_name" placeholder="Назва">
+                <input type="text" name="price" id="modal_form_item_price" placeholder="Price">
+                <input type="text" name="url" id="modal_form_item_img_url" placeholder="Image URL 500x500" value="img/tit1.jpg">
+                <textarea name="description" id="modal_form_textarea_item_description" cols="20" rows="10" placeholder="Опис"></textarea>
+                <button id="modal_item_add_edit_btn">НАДІСЛАТИ</button>
+            </form>
+        </div> <!-- modal_form_item -->
 
-            <div class="item">
-                <img src="img/dog1.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
 
-            <div class="item">
-                <img src="img/dog2.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
 
-            <div class="item">
-                <img src="img/dog3.jpg" alt="">
-                <div class="item_data_blok">
-                    <div class="item_name">
-                        <h3>Назва тваринки</h3>
-                    </div>
-                    <div class="item_btns">
-                        <div class="item_btn_more_info">
-                            <a href="">Деталі</a>
-                        </div>
-                        <div class="item_btn_add_to_cart">
-                            <a href="">
-                                <img src="icons/white-cart.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--item -->
 
-         </div> <!--container -->
+    </div> <!-- modal_overlay -->
 
-    </div> main-shop<!--main_shop -->
+      
+
     
-    <script src="shop.js"></script>
+    
+    <div class="modal_filter modal_win" id="modal_filter_id">
+        <div class="modal_close" id="modal_close_filter">&times;</div>
+        <h3>Оберіть категорію:</h3>
+        <select name="category" class="select_filter" id="select_filter_category">
+            <option value="All">Всі</option>
+            <option value="Cats">Котики</option>
+            <option value="Dogs">Собачки</option>
+            <option value="Birds">Пташечки</option>
+            <option value="Other">Інші</option>
+          </select>
+
+          <h3>Сортування:</h3>
+
+          <select name="sort" class="select_filter" id="select_filter_sort">
+            <option value="by_name">За назвою</option>
+            <option value="by_price">За ціною</option>
+          </select>
+
+          <button class="filter_submit">OK</button>
+
+    </div> <!-- modal_filter -->
+
+
+     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/shop.js"></script>
 </body>
 </html>
