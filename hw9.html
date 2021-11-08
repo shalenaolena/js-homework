@@ -59,7 +59,7 @@
       $("[type=checkbox]").change(function(){
 
         if($("input:checked").length >= 3) {    
-           $("input").not(":checked").attr("disabled", true);
+           $("input").is(":checked").attr("disabled", true);
                    
         } else {
           $("input").attr("disabled", false);
