@@ -30,13 +30,19 @@ const mul = (...myArgs) => {
     let newArr = myArgs.map(item => {
         let result;
         if (typeof item =="number") { result = +item;}
-        else{result = 0;}
+        else{result = 0;
+        }
         return result;
-
     });
+
+    let newArray2 = newArr.filter(function(f) { return f !== 0 })
+    console.log(newArray2);
+
+    if (newArray2.length>0) {let result = newArray2.reduce((sum, current) => sum * current);
+        return result;
+    } else {return 0;}
     
-    let result = newArr.reduce((sum, current) => sum + current);
-    return result;
+    
  }
  
 console.log(mul(1, "str", 2, 3, true)); // 6
@@ -44,30 +50,33 @@ console.log(mul(null, "str", false, true)); // 0
 
  
 // ------- TASK 4 ------------???
-// let server = {
-//     data: 0,
-//     convertToString: function (callback) {
-//        callback((function () {
-//           return this.data + "";
-//        }).bind(this));
-//     }
-//  };
-//  let client = {
-//     server: server,
-//     result: "",
-//     calc: function (data) {
-//        this.server.data = data;
-//        this.server.convertToString(this.notification());
-//     },
-//     notification: function () {
-//        return (function (callback) {
-//           this.result = callback();
-//        }).bind(this);
-//     }
-//  };
-//  client.calc(123);
- //console.log(client.result); // "123"
- //console.log(typeof client.result); // "string"
+let server = {
+    data: 0,
+    convertToString: function (callback) {
+       callback((function () {
+          return this.data + "";
+       })//.bind(this)
+       );
+    }
+ };
+ let client = {
+    server: server,
+    result: "",
+    calc: function (data) {
+       this.server.data = data;
+       this.server.convertToString(this.notification());
+    },
+    notification: function () {
+       return (function (callback) {
+          this.result = callback();
+       })//.bind(this);
+    }
+ };
+
+
+
+ console.log(client.result); // "123"
+ console.log(typeof client.result); // "string"
  
 // ------- TASK 5 ------------done
 
@@ -89,3 +98,8 @@ function mapBuilder (key, value) {
 let map = mapBuilder(keys, values);
 console.log(map.size); // 4
 console.log(map.get(2)); // "span"
+
+
+
+//
+
